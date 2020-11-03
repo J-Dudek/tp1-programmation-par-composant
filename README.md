@@ -7,9 +7,9 @@ Créer un projet Spring-Boot (seul ou à deux)
 
 `-> Marque (1 - n) Voiture`
 
-`-> Client (1 - n) Voitures`
+`-> Client (1 - n) Voiture`
 
-`-> Concessionnaire ( n - n) Marques`
+`-> Concessionnaire ( n - n) Marque`
 
 `-> Concessionnaire (1 - n) Adresse`
 
