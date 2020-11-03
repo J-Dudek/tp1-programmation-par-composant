@@ -1,5 +1,3 @@
-#TP1 - Programmation par composant
-
 ## Sujet
 Créer un projet Spring-Boot (seul ou à deux)
 
