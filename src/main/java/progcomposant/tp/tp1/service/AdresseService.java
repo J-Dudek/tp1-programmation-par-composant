@@ -27,10 +27,12 @@ public class AdresseService {
         for(Adresse add : adresseRepository.findByConcessionnaireId(concessionnaireId)){
             adresseDTO.add(adresseToDTO(add));
         }
-
         return adresseDTO;
     }
 
+    public void createAdresse(AdresseDTO adresseDTO){
+        adresseRepository.save(dtoToAdresse(adresseDTO));
+    }
     protected AdresseDTO adresseToDTO(Adresse adresse){
         AdresseDTO adresseDTO = new AdresseDTO();
         adresseDTO.setId(adresse.getId());

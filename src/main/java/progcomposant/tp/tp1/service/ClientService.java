@@ -24,6 +24,10 @@ public class ClientService {
         return listClientToDTO(clientRepository.findAll());
     }
 
+    public void createClient(ClientDTO clientDTO){
+        clientRepository.save(dtoToClient(clientDTO));
+    }
+
     protected ClientDTO clientToDTO(Client client){
         ClientDTO clientDTO = new ClientDTO();
         clientDTO.setId(client.getId());

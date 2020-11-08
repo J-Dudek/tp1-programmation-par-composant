@@ -28,6 +28,9 @@ public class MarqueService {
         return marqueToDTO(marqueRepository.findByNom(nom));
     }
 
+    public void createMarque(MarqueDTO marqueDTO){
+        marqueRepository.save(dtoToMarque(marqueDTO));
+    }
     protected MarqueDTO marqueToDTO(Marque marque){
         MarqueDTO marqueDTO = new MarqueDTO();
         marqueDTO.setId(marque.getId());

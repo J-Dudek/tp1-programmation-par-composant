@@ -30,6 +30,10 @@ public class VoitureService {
         return lstVoitureToDTO(voitureRepository.findByMarqueId(marqueId));
     }
 
+    public void createVoiture(VoitureDTO voitureDTO){
+        voitureRepository.save(dtoToVoiture(voitureDTO));
+    }
+
     protected VoitureDTO voitureToDTO(Voiture voiture){
         VoitureDTO voitureDTO = new VoitureDTO();
         voitureDTO.setCouleur(voiture.getCouleur());

@@ -1,9 +1,7 @@
 package progcomposant.tp.tp1.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import progcomposant.tp.tp1.dto.MarqueDTO;
 import progcomposant.tp.tp1.service.MarqueService;
 
@@ -20,8 +18,14 @@ public class MarqueManager {
     public Set<MarqueDTO> findAll(){
         return marqueService.findAll();
     }
+
     @GetMapping(path = "/marque/{nom}")
     public MarqueDTO findByNom(@PathVariable String nom){
         return marqueService.findByNom(nom);
+    }
+
+    @PostMapping(path = "/marque")
+    public void createMarque(@RequestBody MarqueDTO marqueDTO){
+        marqueService.createMarque(marqueDTO);
     }
 }
