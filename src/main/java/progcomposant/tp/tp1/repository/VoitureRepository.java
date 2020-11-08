@@ -11,4 +11,5 @@ public interface VoitureRepository extends CrudRepository<Voiture,Integer> {
     Set<Voiture> findByClientId(int clientId);
     void deleteById(int id);
     Voiture findVoitureById(int id);
+    long count();
 }

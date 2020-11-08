@@ -25,7 +25,7 @@ public class MarqueService {
     }
 
     public MarqueDTO findByNom(String nom){
-        return marqueToDTO(marqueRepository.findByNom(nom));
+        return marqueToDTO(marqueRepository.findByNomIgnoreCase(nom));
     }
 
     public void createMarque(MarqueDTO marqueDTO){

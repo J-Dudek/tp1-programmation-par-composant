@@ -53,6 +53,7 @@ insert into client(id,nom,prenom,mail) values(10,'Hants','SIlvie','voituret@esse
 insert into concessionnaire_marques ( concessionnaire_id , marque_id ) values(1,1);
 insert into concessionnaire_marques ( concessionnaire_id , marque_id ) values(1,2);
 insert into concessionnaire_marques ( concessionnaire_id , marque_id ) values(1,3);
-insert into concessionnaire_marques ( concessionnaire_id , marque_id ) values(2,3);
-insert into concessionnaire_marques ( concessionnaire_id , marque_id ) values(2,4);
-insert into concessionnaire_marques ( concessionnaire_id , marque_id ) values(2,5);
+insert into concessionnaire_marques ( concessionnaire_id , marque_id ) values(3,3);
+insert into concessionnaire_marques ( concessionnaire_id , marque_id ) values(4,4);
+insert into concessionnaire_marques ( concessionnaire_id , marque_id ) values(3,5);
+insert into concessionnaire_marques ( concessionnaire_id , marque_id ) values(2,1);

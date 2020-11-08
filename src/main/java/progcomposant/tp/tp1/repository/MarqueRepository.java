@@ -9,8 +9,8 @@ import java.util.Set;
 public interface MarqueRepository extends CrudRepository<Marque,Integer> {
     Set<Marque> findAll();
     Marque findById(int id);
-    Marque findByNom(String nom);
+    Marque findByNomIgnoreCase(String nom);
     Set<Marque> findMarquesByConcessionnaires(Concessionnaire concessionnaire);
     void deleteById(int id);
-
+    long count();
 }

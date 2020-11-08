@@ -22,6 +22,7 @@ public class AdresseService {
     public Set<AdresseDTO> findAll(){
         return listAdresseToDTO(adresseRepository.findAll());
     }
+
     public Set<AdresseDTO> findByConcessionnaireId(int concessionnaireId){
         Set<AdresseDTO> adresseDTO = new HashSet<>();
         for(Adresse add : adresseRepository.findByConcessionnaireId(concessionnaireId)){
@@ -30,6 +31,9 @@ public class AdresseService {
         return adresseDTO;
     }
 
+    public void saveOrUpdateAdresse(AdresseDTO adresseDTO){
+        adresseRepository.save(dtoToAdresse(adresseDTO));
+    }
 
 
     public void createAdresse(AdresseDTO adresseDTO){

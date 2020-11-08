@@ -11,4 +11,5 @@ public interface ConcessionnaireRepository extends CrudRepository<Concessionnair
     Concessionnaire findById(int id);
     Set<Concessionnaire> findConcessionnaireByMarques(Marque marque);
     void deleteById(int id);
+    long count();
 }

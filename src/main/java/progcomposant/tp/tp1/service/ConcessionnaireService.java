@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import progcomposant.tp.tp1.dto.ConcessionnaireDTO;
 import progcomposant.tp.tp1.model.Concessionnaire;
+import progcomposant.tp.tp1.model.Marque;
 import progcomposant.tp.tp1.repository.AdresseRepository;
 import progcomposant.tp.tp1.repository.ConcessionnaireRepository;
 import progcomposant.tp.tp1.repository.MarqueRepository;
@@ -30,7 +31,7 @@ public class ConcessionnaireService {
         return lstConcessionnaireToDto(concessionnaireRepository.findAll());
     }
 
-    public void createConcessionnaire(ConcessionnaireDTO concessionnaireDTO){
+    public void saveOrUpdate(ConcessionnaireDTO concessionnaireDTO){
         concessionnaireRepository.save(dtoToConcessionnaire(concessionnaireDTO));
     }
 
@@ -38,6 +39,19 @@ public class ConcessionnaireService {
         adresseService.onDeleteConcessionnaire(id);
         concessionnaireRepository.deleteById(id);
     }
+
+    public Set<ConcessionnaireDTO> findConcessionnaireByMarques(String nomMarque){
+        Marque marque = marqueRepository.findByNomIgnoreCase(nomMarque);
+        return lstConcessionnaireToDto(concessionnaireRepository.findConcessionnaireByMarques(marque));
+    }
+
+    public void ajoutMarqueAConcessionnaire(int idConcessionnaire,int idMArque){
+        Marque marque = marqueRepository.findById(idMArque);
+        Concessionnaire concessionnaire = concessionnaireRepository.findById(idConcessionnaire);
+        concessionnaire.getMarques().add(marque);
+        concessionnaireRepository.save(concessionnaire);
+    }
+
     protected ConcessionnaireDTO concessionnaireToDTO(Concessionnaire concessionnaire){
         ConcessionnaireDTO concessionnaireDTO = new ConcessionnaireDTO();
         concessionnaireDTO.setId(concessionnaire.getId());

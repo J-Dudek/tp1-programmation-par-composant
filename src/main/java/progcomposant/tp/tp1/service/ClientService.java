@@ -25,7 +25,7 @@ public class ClientService {
         return listClientToDTO(clientRepository.findAll());
     }
 
-    public void createClient(ClientDTO clientDTO){
+    public void saveOrUpdate(ClientDTO clientDTO){
         clientRepository.save(dtoToClient(clientDTO));
     }
     public void deleteById(int id){

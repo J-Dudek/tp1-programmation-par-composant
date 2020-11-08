@@ -9,4 +9,6 @@ public interface AdresseRepository extends CrudRepository<Adresse,Integer> {
     Set<Adresse> findAll();
     Set<Adresse> findByConcessionnaireId(int concessionnaireId);
     void deleteById(Integer integer);
+    Adresse findById(int id);
+    long count();
 }
