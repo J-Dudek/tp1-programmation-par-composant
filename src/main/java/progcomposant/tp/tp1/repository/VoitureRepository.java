@@ -10,4 +10,5 @@ public interface VoitureRepository extends CrudRepository<Voiture,Integer> {
     Set<Voiture> findAll();
     Set<Voiture> findByMarqueId(int marqueId);
     Set<Voiture> findVoituresByClients(Client client);
+    void deleteById(int id);
 }

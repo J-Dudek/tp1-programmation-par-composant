@@ -27,6 +27,9 @@ public class ClientService {
     public void createClient(ClientDTO clientDTO){
         clientRepository.save(dtoToClient(clientDTO));
     }
+    public void deleteById(int id){
+        clientRepository.deleteById(id);
+    }
 
     protected ClientDTO clientToDTO(Client client){
         ClientDTO clientDTO = new ClientDTO();

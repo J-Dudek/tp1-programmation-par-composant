@@ -34,6 +34,10 @@ public class ConcessionnaireService {
         concessionnaireRepository.save(dtoToConcessionnaire(concessionnaireDTO));
     }
 
+    public void deleteById(int id){
+        adresseService.onDeleteConcessionnaire(id);
+        concessionnaireRepository.deleteById(id);
+    }
     protected ConcessionnaireDTO concessionnaireToDTO(Concessionnaire concessionnaire){
         ConcessionnaireDTO concessionnaireDTO = new ConcessionnaireDTO();
         concessionnaireDTO.setId(concessionnaire.getId());

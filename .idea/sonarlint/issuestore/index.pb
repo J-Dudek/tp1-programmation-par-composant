@@ -10,8 +10,6 @@
 mvnw,5/d/5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
 8
 mvnw.cmd,1/f/1f1763f358c257ea3515417352b82b0165647ad1
-k
-;src/test/java/progcomposant/tp/tp1/Tp1ApplicationTests.java,0/6/06cdd9bb6cac7e1689c23949e83c6691e7390a49
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 f
@@ -76,3 +74,13 @@ U
 %target/classes/application.properties,b/b/bb173f9557479135e0f1bcd9c6c5f7b4ae5f77e8
 y
 Isrc/main/java/progcomposant/tp/tp1/controller/ConcessionnaireManager.java,8/1/814ec19574ceac91e4c1bff18fe855de76856474
+Y
+)src/main/resources/application.properties,0/6/06f65155ec73600b9fc5c4dc2883d4bb84d8e284
+p
+@src/main/java/progcomposant/tp/tp1/controller/MarqueManager.java,4/2/42a2b9f0640dcd20d9e0a6e8952eda625e132dc4
+K
+src/main/resources/data.sql,7/3/73d31a43eeb5160da7670a8c11a94a16128cf92d
+q
+Asrc/main/java/progcomposant/tp/tp1/controller/VoitureManager.java,1/e/1e0bb2ec9cac9dee24039eb34db6e8cefe9461f0
+p
+@src/main/java/progcomposant/tp/tp1/controller/ClientManager.java,5/b/5bdc50082276288c912c20fa83d0508adfabac83

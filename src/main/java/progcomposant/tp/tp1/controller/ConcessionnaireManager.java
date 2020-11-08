@@ -1,10 +1,7 @@
 package progcomposant.tp.tp1.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import progcomposant.tp.tp1.dto.ConcessionnaireDTO;
 import progcomposant.tp.tp1.service.ConcessionnaireService;
 
@@ -23,6 +20,11 @@ public class ConcessionnaireManager {
     @PostMapping("/concessionnaire")
     public void createConcessionnaire(@RequestBody ConcessionnaireDTO concessionnaireDTO) {
         concessionnaireService.createConcessionnaire(concessionnaireDTO);
+    }
+
+    @DeleteMapping(path = "/concessionnaire/{id}")
+    public void deleteById(@PathVariable int id){
+        concessionnaireService.deleteById(id);
     }
 
 }

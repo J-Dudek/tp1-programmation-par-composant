@@ -3,6 +3,7 @@ package progcomposant.tp.tp1.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import progcomposant.tp.tp1.dto.MarqueDTO;
+import progcomposant.tp.tp1.dto.VoitureDTO;
 import progcomposant.tp.tp1.model.Marque;
 import progcomposant.tp.tp1.repository.MarqueRepository;
 import progcomposant.tp.tp1.repository.VoitureRepository;
@@ -30,6 +31,10 @@ public class MarqueService {
 
     public void createMarque(MarqueDTO marqueDTO){
         marqueRepository.save(dtoToMarque(marqueDTO));
+    }
+    public void deleteById(int id){
+        voitureService.deleteByMarqueId(id);
+        marqueRepository.deleteById(id);
     }
     protected MarqueDTO marqueToDTO(Marque marque){
         MarqueDTO marqueDTO = new MarqueDTO();

@@ -34,6 +34,18 @@ public class VoitureService {
         voitureRepository.save(dtoToVoiture(voitureDTO));
     }
 
+    public void deleteById(int id){
+        voitureRepository.deleteById(id);
+    }
+
+    public void deleteByMarqueId(int marqueId){
+        deleteAll(findByMarqueId(marqueId));
+    }
+    public void deleteAll(Set<VoitureDTO> setVoitDto){
+        for(VoitureDTO voitureDTO: setVoitDto){
+            voitureRepository.delete(dtoToVoiture(voitureDTO));
+        }
+    }
     protected VoitureDTO voitureToDTO(Voiture voiture){
         VoitureDTO voitureDTO = new VoitureDTO();
         voitureDTO.setCouleur(voiture.getCouleur());

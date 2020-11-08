@@ -27,4 +27,9 @@ public class VoitureManager {
         voitureService.createVoiture(voitureDTO);
     }
 
+    @DeleteMapping(path = "/voiture/{id}")
+    public void deleteById(@PathVariable int id){
+        voitureService.deleteById(id);
+    }
+
 }

@@ -30,9 +30,22 @@ public class AdresseService {
         return adresseDTO;
     }
 
+
+
     public void createAdresse(AdresseDTO adresseDTO){
         adresseRepository.save(dtoToAdresse(adresseDTO));
     }
+
+    public void deleteAdresseById(int id){
+        adresseRepository.deleteById(id);
+    }
+    public void onDeleteConcessionnaire( int idConcessionnaire){
+        for(Adresse adresse : adresseRepository.findByConcessionnaireId(idConcessionnaire)){
+            adresse.setConcessionnaire(null);
+            adresseRepository.save(adresse);
+        }
+    }
+
     protected AdresseDTO adresseToDTO(Adresse adresse){
         AdresseDTO adresseDTO = new AdresseDTO();
         adresseDTO.setId(adresse.getId());

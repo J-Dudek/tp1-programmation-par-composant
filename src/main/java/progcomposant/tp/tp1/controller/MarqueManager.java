@@ -28,4 +28,9 @@ public class MarqueManager {
     public void createMarque(@RequestBody MarqueDTO marqueDTO){
         marqueService.createMarque(marqueDTO);
     }
+
+    @DeleteMapping(path = "/marque/{id}")
+    public void deleteById(@PathVariable int id){
+        marqueService.deleteById(id);
+    }
 }

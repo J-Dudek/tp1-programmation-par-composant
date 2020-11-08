@@ -26,4 +26,9 @@ public class AdresseManager {
         adresseService.createAdresse(adresseDTO);
     }
 
+    @DeleteMapping(path = "/adresse/{id}")
+    public void deleteAdresse(@PathVariable int id){
+        adresseService.deleteAdresseById(id);
+    }
+
 }

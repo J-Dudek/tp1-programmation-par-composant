@@ -11,5 +11,6 @@ public interface MarqueRepository extends CrudRepository<Marque,Integer> {
     Marque findById(int id);
     Marque findByNom(String nom);
     Set<Marque> findMarquesByConcessionnaires(Concessionnaire concessionnaire);
+    void deleteById(int id);
 
 }
