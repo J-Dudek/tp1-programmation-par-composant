@@ -78,8 +78,6 @@ Y
 )src/main/resources/application.properties,0/6/06f65155ec73600b9fc5c4dc2883d4bb84d8e284
 p
 @src/main/java/progcomposant/tp/tp1/controller/MarqueManager.java,4/2/42a2b9f0640dcd20d9e0a6e8952eda625e132dc4
-K
-src/main/resources/data.sql,7/3/73d31a43eeb5160da7670a8c11a94a16128cf92d
 q
 Asrc/main/java/progcomposant/tp/tp1/controller/VoitureManager.java,1/e/1e0bb2ec9cac9dee24039eb34db6e8cefe9461f0
 p

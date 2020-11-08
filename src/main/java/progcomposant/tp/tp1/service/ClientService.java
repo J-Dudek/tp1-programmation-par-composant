@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import progcomposant.tp.tp1.dto.ClientDTO;
 import progcomposant.tp.tp1.model.Client;
+import progcomposant.tp.tp1.model.Voiture;
 import progcomposant.tp.tp1.repository.ClientRepository;
 import progcomposant.tp.tp1.repository.VoitureRepository;
 
@@ -30,6 +31,13 @@ public class ClientService {
     public void deleteById(int id){
         clientRepository.deleteById(id);
     }
+    public void attribuerVoiture(int idClient,int idVoiture){
+        Client client=clientRepository.findById(idClient);
+        Voiture voiture=voitureRepository.findVoitureById(idVoiture);
+        voiture.setClient(client);
+        voitureRepository.save(voiture);
+
+    }
 
     protected ClientDTO clientToDTO(Client client){
         ClientDTO clientDTO = new ClientDTO();
@@ -37,7 +45,7 @@ public class ClientService {
         clientDTO.setMail(client.getMail());
         clientDTO.setNom(client.getNom());
         clientDTO.setPrenom(client.getPrenom());
-        clientDTO.setVoituresDTO(voitureService.lstVoitureToDTO(voitureRepository.findVoituresByClients(client)));
+        clientDTO.setVoituresDTO(voitureService.lstVoitureToDTO(voitureRepository.findByClientId(client.getId())));
         return clientDTO;
     }
 

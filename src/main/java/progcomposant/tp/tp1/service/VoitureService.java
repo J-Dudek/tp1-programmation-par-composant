@@ -3,10 +3,11 @@ package progcomposant.tp.tp1.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import progcomposant.tp.tp1.dto.VoitureDTO;
-import progcomposant.tp.tp1.model.Client;
 import progcomposant.tp.tp1.model.Voiture;
+import progcomposant.tp.tp1.repository.ClientRepository;
 import progcomposant.tp.tp1.repository.VoitureRepository;
 
+import javax.transaction.Transactional;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,9 +19,11 @@ public class VoitureService {
     @Autowired
     private MarqueService marqueService;
 
-    public Set<VoitureDTO> findVoituresByClient(Client client){
-        return lstVoitureToDTO(voitureRepository.findVoituresByClients(client));
-    }
+    @Autowired
+    ClientService clientService;
+    @Autowired
+    ClientRepository clientRepository;
+
 
     public Set<VoitureDTO> findAll(){
         return lstVoitureToDTO((voitureRepository.findAll()));
@@ -34,6 +37,7 @@ public class VoitureService {
         voitureRepository.save(dtoToVoiture(voitureDTO));
     }
 
+    @Transactional
     public void deleteById(int id){
         voitureRepository.deleteById(id);
     }

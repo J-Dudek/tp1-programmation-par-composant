@@ -1,14 +1,13 @@
 package progcomposant.tp.tp1.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
-import javax.persistence.*;
-import java.util.Set;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 @Data
@@ -21,12 +20,12 @@ public class Voiture {
     private String couleur;
     private String option;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @ManyToOne
     @JoinColumn(name="marque_id")
     private Marque marque;
-    @ManyToMany(mappedBy = "voitures",cascade = CascadeType.REMOVE)
-    @JsonIgnoreProperties
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    private Set<Client> clients;
+
+    @ManyToOne
+    @JoinColumn(name="id_client")
+    private Client client;
 
 }
