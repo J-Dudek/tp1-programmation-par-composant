@@ -3,7 +3,6 @@ package progcomposant.tp.tp1.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import progcomposant.tp.tp1.dto.MarqueDTO;
-import progcomposant.tp.tp1.dto.VoitureDTO;
 import progcomposant.tp.tp1.model.Marque;
 import progcomposant.tp.tp1.repository.MarqueRepository;
 import progcomposant.tp.tp1.repository.VoitureRepository;

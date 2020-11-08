@@ -2,9 +2,6 @@ package progcomposant.tp.tp1.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-import org.hibernate.engine.internal.Cascade;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
