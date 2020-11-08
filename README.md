@@ -24,6 +24,9 @@ Créer un projet Spring-Boot (seul ou à deux)
 Réaliser une api Rest avec SpringBoot.
 Les divers attributs sont libres ainsi que les fonctionnalités possibles.
 
+## Comment tester l'API ?
+Après avoir lancé l'application :
+- Se rendre sur http://localhost:8282/swagger-ui.html , vous aurez alors accès aux différentes fonctionnalités de l'API.
 
 ------------
 

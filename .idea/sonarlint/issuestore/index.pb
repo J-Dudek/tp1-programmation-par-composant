@@ -74,8 +74,6 @@ U
 %target/classes/application.properties,b/b/bb173f9557479135e0f1bcd9c6c5f7b4ae5f77e8
 y
 Isrc/main/java/progcomposant/tp/tp1/controller/ConcessionnaireManager.java,8/1/814ec19574ceac91e4c1bff18fe855de76856474
-Y
-)src/main/resources/application.properties,0/6/06f65155ec73600b9fc5c4dc2883d4bb84d8e284
 p
 @src/main/java/progcomposant/tp/tp1/controller/MarqueManager.java,4/2/42a2b9f0640dcd20d9e0a6e8952eda625e132dc4
 q
