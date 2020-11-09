@@ -87,6 +87,10 @@
 					</from>
 					<to>
 						<image>docker.io/julienm1/tp1</image>
+						<tags>
+							<tag>${project.version}</tag>
+							<tag>latest</tag>
+						</tags>
 					</to>
 					<container>
 						<ports>
