@@ -9,7 +9,6 @@ jobs:
     steps:
       # git pull
       - checkout
-      - run: docker login -u "julienm1" -p $DOCKERHUB_PASSWORD
 
       # Download and cache dependencies
       - restore_cache:
