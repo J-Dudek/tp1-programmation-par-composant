@@ -13,7 +13,7 @@ jobs:
       # setup testing env
       - run:
           name: Login to DockerHub
-          command: docker login -u julienm1 -p $DOCKERHUB_PASSWORD
+          command: docker login -u "julienm1" -p $DOCKERHUB_PASSWORD
 
       # Download and cache dependencies
       - restore_cache:
@@ -36,4 +36,4 @@ jobs:
       # store raw contents of src code
       - store_artifacts:
           path: target/classes
-          destination: sample-springboot-api
+          destination: tp1-programmation-par-composant
