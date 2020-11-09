@@ -13,7 +13,7 @@ import java.util.Set;
 
 @Api(tags = { SwaggerConfig.MARQUE })
 @RestController()
-public class MarqueManager {
+public class MarqueController {
 
     @Autowired
     MarqueService marqueService;

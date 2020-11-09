@@ -13,7 +13,7 @@ import progcomposant.tp.tp1.service.ConcessionnaireService;
 
 @Api(tags = { SwaggerConfig.TRANSACTION })
 @RestController
-public class TransactionsManager {
+public class TransactionsController {
 
     @Autowired
     ClientService clientService;

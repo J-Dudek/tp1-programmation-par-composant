@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Api(tags = { SwaggerConfig.CLIENT })
 @RestController()
-public class ClientManager {
+public class ClientController {
     @Autowired
     ClientService clientService;
 

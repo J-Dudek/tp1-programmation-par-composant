@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Api(tags = { SwaggerConfig.CONCESSIONNAIRE })
 @RestController()
-public class ConcessionnaireManager {
+public class ConcessionnaireController {
     @Autowired
     ConcessionnaireService concessionnaireService;
 

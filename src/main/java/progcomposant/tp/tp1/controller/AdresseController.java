@@ -12,7 +12,7 @@ import progcomposant.tp.tp1.service.AdresseService;
 import java.util.Set;
 @Api(tags = { SwaggerConfig.ADDRESSE })
 @RestController
-public class AdresseManager {
+public class AdresseController {
     @Autowired
     AdresseService adresseService;
 

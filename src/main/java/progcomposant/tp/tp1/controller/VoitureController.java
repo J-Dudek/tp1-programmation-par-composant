@@ -13,7 +13,7 @@ import java.util.Set;
 
 @Api(tags = { SwaggerConfig.VOITURE })
 @RestController()
-public class VoitureManager {
+public class VoitureController {
     @Autowired
     VoitureService voitureService;
 
