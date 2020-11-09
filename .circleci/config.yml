@@ -28,6 +28,7 @@ jobs:
           key: sample-tp1-api-{{ checksum "pom.xml" }}
 
       # package into a jar
+      - run: mvn clean install
       - run: mvn clean package
 
       # build and push docker image to docker hub
