@@ -11,8 +11,6 @@ jobs:
       - checkout
 
       # setup testing env
-      - setup_remote_docker:
-          docker_layer_caching: true
       - run:
           name: Login to DockerHub
           command: docker login -u julienm1 -p $DOCKERHUB_PASSWORD
