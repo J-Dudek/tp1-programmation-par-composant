@@ -10,11 +10,6 @@ jobs:
       # git pull
       - checkout
 
-      # setup testing env
-      - run:
-          name: Login to DockerHub
-          command: docker login -u "julienm1" -p $DOCKERHUB_PASSWORD
-
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -32,6 +27,7 @@ jobs:
       - run: mvn clean package
 
       # build and push docker image to docker hub
+      - run: docker login -u "julienm1" -p $DOCKERHUB_PASSWORD
       - run: mvn clean compile jib:build -Dimage=julienm1/tp1:$CIRCLE_BUILD_NUM
 
       # store raw contents of src code
