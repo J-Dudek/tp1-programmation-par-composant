@@ -27,8 +27,7 @@ jobs:
       - run: mvn clean package
 
       # build and push docker image to docker hub
-      - run: docker login -u "julienm1" -p $DOCKERHUB_PASSWORD
-      - run: mvn clean compile jib:build -Dimage=julienm1/tp1:$CIRCLE_BUILD_NUM
+      - run: mvn clean compile jib:build -Djib.to.auth.username=julienm1 -Djib.to.auth.password=$DOCKERHUB_PASSWORD=julienm1/tp1:$CIRCLE_BUILD_NUM
 
       # store raw contents of src code
       - store_artifacts:
