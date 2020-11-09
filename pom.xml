@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>progcomposant.tp</groupId>
 	<artifactId>tp1</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>tp1</name>
 	<description>TP autour de la voiture</description>
 
