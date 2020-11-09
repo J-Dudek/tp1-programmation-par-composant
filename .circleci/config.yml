@@ -33,9 +33,11 @@ jobs:
   dock:
     docker:
       - image: circleci/openjdk:latest
-      - checkout
-      - restore_cache:
-          keys:
-          - tp1-api-{{ checksum "pom.xml" }}
+      working_directory: ~/tp1-programmation-par-composant
+      steps:
+        - checkout
+        - restore_cache:
+            keys:
+            - tp1-api-{{ checksum "pom.xml" }}
       # build and push docker image to docker hub
       - run: mvn compile jib:build -Djib.to.auth.username="julienm1" -Djib.to.auth.password=$DOCKERHUB_PASSWORD
