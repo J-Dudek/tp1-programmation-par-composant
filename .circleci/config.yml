@@ -1,6 +1,7 @@
 version: 2.1
 jobs:
   build:
+    contex: Perso
     docker:
       - image: circleci/openjdk:11.0.1-jdk
 
