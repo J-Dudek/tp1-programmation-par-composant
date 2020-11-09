@@ -86,7 +86,7 @@
 						<image>openjdk:11-jdk-slim</image>
 					</from>
 					<to>
-						<image>docker.io/julienm1/tp1</image>
+						<image>registry.hub.docker.com/julienm1/tp1</image>
 						<tags>
 							<tag>${project.version}</tag>
 							<tag>latest</tag>
