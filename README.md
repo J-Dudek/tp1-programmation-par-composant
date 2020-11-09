@@ -37,4 +37,5 @@ Après avoir lancé l'application :
 ------------
 
 Code réalisé avec IntelliJ en utilisant [Sonarlint](https://www.sonarlint.org/ "Sonarlint") pour la qualité du code.
-CI avec  [circleci](https://circleci.com/ "circleci")
+
+CI avec  [circleci](https://circleci.com/ "circleci").
