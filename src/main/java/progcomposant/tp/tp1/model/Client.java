@@ -9,7 +9,6 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-@EqualsAndHashCode(exclude = {"voitures"})
 @NoArgsConstructor
 public class Client {
     @Id
