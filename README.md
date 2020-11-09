@@ -28,6 +28,7 @@ Les divers attributs sont libres ainsi que les fonctionnalités possibles.
 Après avoir lancé l'application :
 - Se rendre sur http://localhost:8282/swagger-ui.html , vous aurez alors accès aux différentes fonctionnalités de l'API.
 
+![alt Swagger](https://github.com/J-Dudek/tp1-programmation-par-composant/blob/main/src/main/resources/Swagger-ui.png "Swagger")
 ------------
 
-Code réalisé avec IntelliJ en utilisant [Sonarlint](https://www.sonarlint.org/ "Sonarlint")
+Code réalisé avec IntelliJ en utilisant [Sonarlint](https://www.sonarlint.org/ "Sonarlint") pour la qualité du code.
