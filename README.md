@@ -29,6 +29,7 @@ Les divers attributs sont libres ainsi que les fonctionnalités possibles.
 - `gh repo clone J-Dudek/tp1-programmation-par-composant`
 #### OU
 - `docker run -it -p 8282:8282  julienm1/tp1:latest`
+#### Ensuite ?
 Après avoir lancé l'application :
 - Se rendre sur http://localhost:8282/swagger-ui.html , vous aurez alors accès aux différentes fonctionnalités de l'API.
 
@@ -36,3 +37,4 @@ Après avoir lancé l'application :
 ------------
 
 Code réalisé avec IntelliJ en utilisant [Sonarlint](https://www.sonarlint.org/ "Sonarlint") pour la qualité du code.
+CI avec  [circleci](https://circleci.com/ "circleci")
