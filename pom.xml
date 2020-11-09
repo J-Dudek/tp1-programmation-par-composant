@@ -95,7 +95,6 @@
 					<container>
 						<ports>
 							<port>8282</port>
-							<port>15370</port>
 						</ports>
 					</container>
 				</configuration>
