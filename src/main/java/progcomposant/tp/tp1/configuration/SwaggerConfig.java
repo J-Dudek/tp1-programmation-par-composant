@@ -39,6 +39,6 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("TP1").version("0.0.1-SNAPSHOT").build();
+        return new ApiInfoBuilder().title("TP1").version("0.0.2-SNAPSHOT").build();
     }
 }
