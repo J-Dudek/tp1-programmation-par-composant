@@ -1,10 +1,7 @@
 version: 2.1
-workflows:
-  tp1:
-    jobs:
-      build:
-        context: Perso
+
 jobs:
+  context: Perso
   build:
     docker:
       - image: circleci/openjdk:stretch
