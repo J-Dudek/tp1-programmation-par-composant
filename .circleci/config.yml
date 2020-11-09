@@ -1,35 +1,41 @@
 version: 2.1
+workflows:
+  build_and_dock:
+    jobs:
+      - build
+      - dock:
+          context: Perso
+          requires:
+            - build
+
 jobs:
   build:
     docker:
       - image: circleci/openjdk:latest
-
     working_directory: ~/tp1-programmation-par-composant
-
     steps:
-      # git pull
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
           - tp1-api-{{ checksum "pom.xml" }}
-
       - run: mvn dependency:go-offline
-
       - save_cache:
           paths:
             - ~/.m2
           key: tp1-api-{{ checksum "pom.xml" }}
-
       # package into a jar
       - run: mvn clean install
       - run: mvn clean package
-
+        # store raw contents of src code
+        - store_artifacts:
+            path: target/classes
+            destination: tp1-programmation-par-composant
+  dock:
+    docker:
+      - image: circleci/openjdk:latest
+      - checkout
+      - restore_cache:
+          keys:
+          - tp1-api-{{ checksum "pom.xml" }}
       # build and push docker image to docker hub
       - run: mvn compile jib:build -Djib.to.auth.username="julienm1" -Djib.to.auth.password=$DOCKERHUB_PASSWORD
-
-      # store raw contents of src code
-      - store_artifacts:
-          path: target/classes
-          destination: tp1-programmation-par-composant
