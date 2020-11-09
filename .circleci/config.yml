@@ -29,9 +29,10 @@ jobs:
 
       # package into a jar
       - run: mvn clean install
+      - run: mvn clean package
 
       # build and push docker image to docker hub
-      - run: mvn clean compile jib:build -Dimage=julienm1/tp1:$CIRCLE_BUILD_NUM
+      #- run: mvn clean compile jib:build -Dimage=julienm1/tp1:$CIRCLE_BUILD_NUM
 
       # store raw contents of src code
       - store_artifacts:
