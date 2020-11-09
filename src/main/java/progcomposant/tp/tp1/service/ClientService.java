@@ -9,6 +9,7 @@ import progcomposant.tp.tp1.repository.ClientRepository;
 import progcomposant.tp.tp1.repository.VoitureRepository;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -32,10 +33,10 @@ public class ClientService {
         clientRepository.deleteById(id);
     }
     public void attribuerVoiture(int idClient,int idVoiture){
-        Client client=clientRepository.findById(idClient);
-        Voiture voiture=voitureRepository.findVoitureById(idVoiture);
-        voiture.setClient(client);
-        voitureRepository.save(voiture);
+        Optional<Client> client=clientRepository.findById(idClient);
+        Optional<Voiture> voiture=voitureRepository.findById(idVoiture);
+        voiture.get().setClient(client.get());
+        voitureRepository.save(voiture.get());
 
     }
 
