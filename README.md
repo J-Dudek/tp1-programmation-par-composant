@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/J-Dudek/tp1-programmation-par-composant.svg?style=shield)](https://circleci.com/gh/J-Dudek/tp1-programmation-par-composant)
 ## Sujet
 Créer un projet Spring-Boot (seul ou à deux)
 
