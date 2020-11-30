@@ -1,1 +1,0 @@
-web: java -jar target/tp1-0.0.3-SNAPSHOT.jar
