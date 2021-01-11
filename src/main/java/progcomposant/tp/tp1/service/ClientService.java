@@ -35,9 +35,10 @@ public class ClientService {
     public void attribuerVoiture(int idClient,int idVoiture){
         Optional<Client> client=clientRepository.findById(idClient);
         Optional<Voiture> voiture=voitureRepository.findById(idVoiture);
-        voiture.get().setClient(client.get());
-        voitureRepository.save(voiture.get());
-
+        if(client.isPresent() && voiture.isPresent()){
+            voiture.get().setClient(client.get());
+            voitureRepository.save(voiture.get());
+        }
     }
 
     protected ClientDTO clientToDTO(Client client){
