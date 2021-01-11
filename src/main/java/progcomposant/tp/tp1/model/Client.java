@@ -1,7 +1,6 @@
 package progcomposant.tp.tp1.model;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
