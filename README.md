@@ -36,6 +36,6 @@ Après avoir lancé l'application :
 ![alt Swagger](https://github.com/J-Dudek/tp1-programmation-par-composant/blob/main/src/main/resources/Swagger-ui.png "Swagger")
 ------------
 
-Code réalisé avec IntelliJ en utilisant [Sonarlint](https://www.sonarlint.org/ "Sonarlint") pour la qualité du code.
+Code réalisé avec IntelliJ en utilisant [Sonarlint](https://www.sonarlint.org/ "Sonarlint") pour la qualité du code..
 
 CI avec  [circleci](https://circleci.com/ "circleci").
